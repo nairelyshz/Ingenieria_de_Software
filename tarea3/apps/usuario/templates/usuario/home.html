@@ -1,0 +1,138 @@
+
+<html lang="en">
+	<head>
+		<title>IS - Tarea 3</title>
+	</head>
+	<style>
+		body{
+			background-color: #c1bdba
+		}
+		#navBar {
+			width: 100%;
+			height: 10%;
+			background-color: black;
+		}
+
+		#logo{
+			width: 30%;
+			height: 80%;
+			background-color: transparent;
+			text-align: center;
+			margin: 0 auto;
+		}
+		p{
+			font-size: 2vw;
+			font-family: Arial;
+			font-style: bold;
+			color: white;
+		}
+		#center_box{
+			margin: 0 auto;
+			width: 50%;
+			height: 60%;
+			background-color: rgba(19, 35, 47, 0.9);
+			margin-top:5%;
+			box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+		
+
+		}
+		#opt_box{
+			width: 90%;
+			height: 15%;
+			background-color: transparent;
+			float:left;
+			margin: 2% auto;
+			margin-left:5%;
+		}
+		.opt{
+			width: 50%;
+			height: 100%;
+			background-color: #179b77;
+			float: left;
+			text-align: center;
+		}
+		#form{
+			width: 90%;
+			height: 70%;
+			background-color: transparent;
+			float: left;
+			margin-left:5%;
+		}
+		.field{
+			width: 90%;
+			height: 20%;
+			background-color: grey;
+			margin-left:5%;
+
+		}
+		.name_field{
+			width: 90%;
+			height: 10%;
+			background-color: orange;
+			margin: 1% auto;
+			margin-bottom:1%;
+		}
+		button{
+			width: 90%;
+			height: 10%;
+			background-color: #179b77; 
+			margin: 1% auto;
+			margin: 5%;
+			color: white;
+		}
+		label{
+			text-align: left;
+			font-size: 80%;
+			font-family: Arial;
+		}
+		span{
+			font-size: 50%;
+		}
+		#message{
+			background-color: transparent;
+			width: 90%;
+			height: 10%;
+			margin: 0 auto;
+		}
+		footer{
+			width: 100%;
+			height: 10%;
+			background-color: black;
+			color: white;
+			position: absolute;
+			margin-top: 8%;
+
+		}
+		footer p{
+			float: right
+
+		}
+
+
+	</style>
+	<body>
+		<section id="navBar">
+			<div id="logo">
+				<p>Ingeniería de Software</p>
+			</div>
+		</section>
+		<section id="center_box">
+			<section id="opt_box">
+				<div class="opt"><p>Iniciar Sesión</p></div>
+				<a href=""><div class="opt"><p>Regístrate</p></div></a>
+			</section>
+			<section id="form">
+				<!--<p class="name_field"></p>
+				<div class="field"></div>
+				<button> Iniciar Sesión</button>-->
+				{% block form %}
+                {% endblock %}
+
+			</section>
+			
+		</section>
+		<footer> <p>Jonathan Bandes Nairelys Hernández</p>  </footer>
+		
+	</body>
+
+</html>

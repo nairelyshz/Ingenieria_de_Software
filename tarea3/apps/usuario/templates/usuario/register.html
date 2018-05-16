@@ -1,0 +1,16 @@
+ {% extends 'usuario/home.html' %}
+
+ {% block form %}
+ 	<!--<p class="name_field"></p>
+	<div class="field"></div>
+	class="glyphicon glyphicon-plus"></span></a>
+	<button> Iniciar Sesión</button>-->
+	<form method="post" ="">
+		{% csrf_token %}
+		{{form.as_p}}
+		<button type="submit"> Iniciar Sesión</button>
+		<section id="message">
+			<p>{{message}}</p>
+		</section>
+	</form>
+ {% endblock %}
