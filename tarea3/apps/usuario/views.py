@@ -14,7 +14,8 @@ class SeguridadView:
 		n = Seguridad()
 		if request.method == "POST":
 			form = SeguridadForm(request.POST)
-			n.registrarUsuario("id","12345678","12345678");
+			print ("*****")
+			print(n.registrarUsuario("id","12345678","12345678"))
 		else:
 			form = SeguridadForm()
 		return render(request, 'usuario/register.html', {'form': form})

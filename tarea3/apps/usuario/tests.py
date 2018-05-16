@@ -3,12 +3,16 @@ from apps.usuario.models import Seguridad
 # Create your tests here.
 class TestSeguridad(TestCase):
 	
-	def test_Seguridad_registro(self):
-		calc = Seguridad()
-		self.assertEqual(None,calc.registrarUsuario("12-10199@usb.ve",12345678,12345678))
+	def test_registro_clave_menor_8(self):
+		seg = Seguridad()
+		self.assertEqual("Clave invalida",seg.registrarUsuario("12-10199@gmail.com","1234567","1234567"))
+
+	def test_registro_clave_mayor_16(self):
+		seg = Seguridad()
+		self.assertEqual("Clave invalida",seg.registrarUsuario("12-10199@gmail.com","1234567maria++77.","1234567maria++77."))
 
 	def test_Seguridad_login(self):
-		calc = Seguridad()
-		self.assertEqual(None,calc.IngresarUsuario("12-10199@usb.ve",12345678))
+		seg = Seguridad()
+		self.assertEqual(None,seg.IngresarUsuario("12-10199@usb.ve",12345678))
 
 	

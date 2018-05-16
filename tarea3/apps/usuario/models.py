@@ -15,7 +15,10 @@ class Seguridad(models.Model):
 		pass
 
 	def registrarUsuario(self,id,password1,password2):
-		pass
+		if (len(password1)>=8 and len(password1)<=16)  :
+			return "Usuario válido"
+		else: 
+			return "Clave invalida"
 
 	def IngresarUsuario(self,id, pass1):
 		pass
