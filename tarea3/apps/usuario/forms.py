@@ -11,3 +11,11 @@ class SeguridadForm(forms.ModelForm):
 				  'password2': 'Confirmar contraseña'}
 		
 			
+class SeguridadForm2(forms.ModelForm):
+	password1 = forms.CharField(required=True, min_length=8, max_length=16)
+	class Meta:
+		model = Seguridad
+		fields = ['eMail','password1']
+		labels ={'eMail':'Correo',
+				  'password1': 'Contraseña',
+				  }
